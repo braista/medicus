@@ -1,0 +1,78 @@
+@CHARSET "ISO-8859-1";
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Calibri';
+	color: rgba(0, 0, 0, 0.8);
+}
+
+header {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+#mainMenu {
+	text-align: right;
+	float: right;
+	width: 70%;
+	margin-top: 2%;
+}
+
+ul {
+	list-style: none;
+}
+
+#logo {
+	font-family: 'Raleway';
+	color: white;
+	font-size: 60px;
+	margin-left: 2%;
+}
+
+#mainMenu ul li {
+	display: inline-block;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+#mainMenu ul li a {
+	display: block;
+	font-size: 140%;
+	color: white;
+	text-decoration: none;
+	padding: 5px;
+	border-radius: 3px 3px 3px 3px;
+	font-family: Calibri Light, Calibri;
+}
+
+#mainMenu ul li a:HOVER {
+	background-color: rgb(3, 169, 244);
+	transition-duration: 500ms;
+}
+
+#container {
+	width: 60%;
+	margin: auto;
+	overflow: hidden;
+	height: auto;
+}
+
+#content {
+	margin-top: 5%;
+}
+#subtitle{
+	margin-bottom: 5%;
+}
+footer {
+	width: 100%;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+	position: fixed;
+	bottom: 0px;
+}
