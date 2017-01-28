@@ -18,9 +18,9 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = {"/", "/home"}, method = RequestMethod.GET)
+	@RequestMapping(value = {"/", "/inicio"}, method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		logger.info("/home: Cargado correctamente", HomeController.class);
+		logger.info("/inicio: Cargado correctamente", HomeController.class);
 		return "home";
 	}
 	
