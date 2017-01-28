@@ -4,5 +4,5 @@
 	<link href="<c:url value="resources/styles/main.css" />" rel="stylesheet" type="text/css">
 	<link href="<c:url value="resources/styles/main-classes.css" />" rel="stylesheet" type="text/css">
 	<link href="<c:url value="https://fonts.googleapis.com/css?family=Raleway:100,600"/>" rel="stylesheet" type="text/css">
-	<title>Game World - <sitemesh:write property='title' /></title>
+	<title>Medicus - <sitemesh:write property='title' /></title>
 </head>

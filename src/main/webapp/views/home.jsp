@@ -1,7 +1,7 @@
 <%@ page session="false"%>
 <html>
 <head>
-<title>Destacados</title>
+<title>Inicio</title>
 </head>
 <body>
 		
