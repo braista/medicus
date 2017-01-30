@@ -9,6 +9,7 @@ public class Turno implements Serializable {
 	private int idturno;
 	private int nroTurno;
 	private Paciente paciente;
+	private PlanMedico plan;
 	private Date llegada;
 	private Date inicio;
 	private Prestador prestador;
@@ -21,7 +22,7 @@ public class Turno implements Serializable {
 	}
 
 	public Turno(int idturno, int nroTurno, Paciente paciente, Date llegada, Date inicio, Prestador prestador,
-			Practica practica, float importe, String observaciones) {
+			Practica practica, PlanMedico plan, float importe, String observaciones) {
 		this.idturno = idturno;
 		this.nroTurno = nroTurno;
 		this.paciente = paciente;
@@ -30,7 +31,16 @@ public class Turno implements Serializable {
 		this.prestador = prestador;
 		this.practica = practica;
 		this.importe = importe;
+		this.plan = plan;
 		this.observaciones = observaciones;
+	}
+
+	public PlanMedico getPlan() {
+		return plan;
+	}
+
+	public void setPlan(PlanMedico plan) {
+		this.plan = plan;
 	}
 
 	public int getIdturno() {
