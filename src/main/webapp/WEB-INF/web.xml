@@ -7,7 +7,24 @@
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/spring/root-context.xml</param-value>
-	</context-param>
+</context-param>
+<!-- listener carga Spring-->
+<listener>
+ <listener-class>
+ org.springframework.web.context.ContextLoaderListener
+ </listener-class>
+</listener>
+<!-- filtro de Spring security-->
+<filter>
+ <filter-name>springSecurityFilterChain</filter-name>
+ <filter-class>
+ org.springframework.web.filter.DelegatingFilterProxy
+ </filter-class>
+</filter>
+<filter-mapping>
+ <filter-name>springSecurityFilterChain</filter-name>
+ <url-pattern>/*</url-pattern>
+</filter-mapping>
 	
 	<!-- Creates the Spring Container shared by all Servlets and Filters -->
 	<listener>
@@ -52,4 +69,14 @@
     <filter-name>sitemesh</filter-name>
     <url-pattern>/*</url-pattern>
   </filter-mapping>
+  
+  <filter>
+  <filter-name>springSecurityFilterChain</filter-name>
+  <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+</filter>
+
+<filter-mapping>
+  <filter-name>springSecurityFilterChain</filter-name>
+  <url-pattern>/*</url-pattern>
+</filter-mapping>
 </web-app>
