@@ -1,11 +1,11 @@
-package ar.com.bs.medicus.model;
+package ar.com.bs.medicus.dto;
 
 import java.io.Serializable;
 
-public class PlanMedico implements Serializable {
+public class PracticaDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	public PlanMedico() {
+	public PracticaDTO() {
 		// TODO Auto-generated constructor stub
 	}
 

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property-name name="hibernate.dialect"	value="org.hibernate.dialect.SQLServerDialect" />
+
+		<!-- Configuracion de conexion -->
+
+		<property name="hibernate.connection.driver_class" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
+		<property name="hibernate.connection.url" value="jdbc:sqlserver://172.16.80.86;DatabaseName=MARCOS" />
+		<property name="hibernate.connection.username" value="academia" />
+		<property name="hibernate.connection.password" value="academia" />		
+		<property name="hibernate.show_sql" value="true"/>
+		
+		<!-- OTHERS -->
+		
+		<property name="mappingLocations">
+			<list>
+				<value>classpath:**/*.hbm.xml</value>
+			</list>
+		</property>
+		<property name="properties">
+			<props>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			<!--<prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect</prop>-->
+				<prop key="hibernate.connection.release_mode">on_close</prop>
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				<prop key="hibernate.cache.provider_class">net.sf.ehcache.hibernate.EhCacheProvider</prop>
+				<prop key="hibernate.jdbc.fetch_size">100</prop>
+				<prop key="hibernate.jdbc.use_streams_for_binary">true</prop>
+				<prop key="hibernate.current_session_context_class">thread</prop>
+			</props>
+		</property>
+		
+		<!-- Lista de archivos de mapeo XML -->
+
+		<mapping resource="/entities/PlanMedico.hbm.xml" />
+
+	</session-factory>
+</hibernate-configuration>

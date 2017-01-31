@@ -1,28 +1,28 @@
-package ar.com.bs.medicus.model;
+package ar.com.bs.medicus.dto;
 
 import java.io.Serializable;
 import java.util.Date;
 
-public class Turno implements Serializable {
+public class TurnoDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private int idturno;
 	private int nroTurno;
-	private Paciente paciente;
-	private PlanMedico plan;
+	private PacienteDTO paciente;
+	private PlanMedicoDTO plan;
 	private Date llegada;
 	private Date inicio;
-	private Prestador prestador;
-	private Practica practica;
+	private PrestadorDTO prestador;
+	private PracticaDTO practica;
 	private float importe;
 	private String observaciones;	
 	
-	public Turno() {
+	public TurnoDTO() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Turno(int idturno, int nroTurno, Paciente paciente, Date llegada, Date inicio, Prestador prestador,
-			Practica practica, PlanMedico plan, float importe, String observaciones) {
+	public TurnoDTO(int idturno, int nroTurno, PacienteDTO paciente, Date llegada, Date inicio, PrestadorDTO prestador,
+			PracticaDTO practica, PlanMedicoDTO plan, float importe, String observaciones) {
 		this.idturno = idturno;
 		this.nroTurno = nroTurno;
 		this.paciente = paciente;
@@ -35,11 +35,11 @@ public class Turno implements Serializable {
 		this.observaciones = observaciones;
 	}
 
-	public PlanMedico getPlan() {
+	public PlanMedicoDTO getPlan() {
 		return plan;
 	}
 
-	public void setPlan(PlanMedico plan) {
+	public void setPlan(PlanMedicoDTO plan) {
 		this.plan = plan;
 	}
 
@@ -59,11 +59,11 @@ public class Turno implements Serializable {
 		this.nroTurno = nroTurno;
 	}
 
-	public Paciente getPaciente() {
+	public PacienteDTO getPaciente() {
 		return paciente;
 	}
 
-	public void setPaciente(Paciente paciente) {
+	public void setPaciente(PacienteDTO paciente) {
 		this.paciente = paciente;
 	}
 
@@ -83,19 +83,19 @@ public class Turno implements Serializable {
 		this.inicio = inicio;
 	}
 
-	public Prestador getPrestador() {
+	public PrestadorDTO getPrestador() {
 		return prestador;
 	}
 
-	public void setPrestador(Prestador prestador) {
+	public void setPrestador(PrestadorDTO prestador) {
 		this.prestador = prestador;
 	}
 
-	public Practica getPractica() {
+	public PracticaDTO getPractica() {
 		return practica;
 	}
 
-	public void setPractica(Practica practica) {
+	public void setPractica(PracticaDTO practica) {
 		this.practica = practica;
 	}
 

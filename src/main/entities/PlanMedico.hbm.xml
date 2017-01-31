@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+ "-//Hibernate/Hibernate Mapping DTD//EN"
+ "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+ 
+ <hibernate-mapping>
+   <class name="PlanMedico" table="PlanMedico">
+      <meta attribute="class-description">
+         Esta clase tiene los detalles de los Planes Medicos
+      </meta>
+      <id name="idplan" column="ID_PLAN" type="int" >
+         <generator class="native"/>
+      </id>
+      <property name="descripcion" column="DESCRIPCION" type="string"/>
+   </class>
+   <!-- TO-DO: agregar el resto de mapeos -->
+</hibernate-mapping>

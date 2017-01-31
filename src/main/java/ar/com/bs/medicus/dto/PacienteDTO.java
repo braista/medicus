@@ -1,9 +1,9 @@
-package ar.com.bs.medicus.model;
+package ar.com.bs.medicus.dto;
 
 import java.io.Serializable;
 import java.util.Date;
 
-public class Paciente implements Serializable {
+public class PacienteDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private int idpaciente;
@@ -18,18 +18,18 @@ public class Paciente implements Serializable {
 	private String sexo;
 	private String estadoCivil;
 	private int familiares;
-	private PlanMedico plan;
+	private PlanMedicoDTO plan;
 	private int nroAfiliado;
 	private boolean eliminado;
 	private Date fechaBaja;
 	
-	public Paciente() {
+	public PacienteDTO() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Paciente(int idpaciente, String apellido, String nombre, String tipoDocumento, String nroDocumento,
+	public PacienteDTO(int idpaciente, String apellido, String nombre, String tipoDocumento, String nroDocumento,
 			String direccion, String telefono, String email, Date fechaNacimiento, String sexo, String estadoCivil,
-			int familiares, PlanMedico plan, int nroAfiliado, boolean eliminado, Date fechaBaja) {
+			int familiares, PlanMedicoDTO plan, int nroAfiliado, boolean eliminado, Date fechaBaja) {
 		this.idpaciente = idpaciente;
 		this.apellido = apellido;
 		this.nombre = nombre;
@@ -152,11 +152,11 @@ public class Paciente implements Serializable {
 		this.familiares = familiares;
 	}
 
-	public PlanMedico getPlan() {
+	public PlanMedicoDTO getPlan() {
 		return plan;
 	}
 
-	public void setPlan(PlanMedico plan) {
+	public void setPlan(PlanMedicoDTO plan) {
 		this.plan = plan;
 	}
 
