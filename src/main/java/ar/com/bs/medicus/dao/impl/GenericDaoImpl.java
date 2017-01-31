@@ -12,6 +12,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 public abstract class GenericDaoImpl<T> implements GenericDao<T> {
+	
 	@PersistenceContext
 	protected EntityManager em;
 	public Set<T> objects = new HashSet<T>();
