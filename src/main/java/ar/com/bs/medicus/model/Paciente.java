@@ -21,6 +21,7 @@ public class Paciente implements Serializable {
 	private PlanMedico plan;
 	private int nroAfiliado;
 	private boolean eliminado;
+	private Date fechaBaja;
 	
 	public Paciente() {
 		// TODO Auto-generated constructor stub
@@ -28,7 +29,7 @@ public class Paciente implements Serializable {
 
 	public Paciente(int idpaciente, String apellido, String nombre, String tipoDocumento, String nroDocumento,
 			String direccion, String telefono, String email, Date fechaNacimiento, String sexo, String estadoCivil,
-			int familiares, PlanMedico plan, int nroAfiliado, boolean eliminado) {
+			int familiares, PlanMedico plan, int nroAfiliado, boolean eliminado, Date fechaBaja) {
 		this.idpaciente = idpaciente;
 		this.apellido = apellido;
 		this.nombre = nombre;
@@ -44,6 +45,15 @@ public class Paciente implements Serializable {
 		this.plan = plan;
 		this.nroAfiliado = nroAfiliado;
 		this.eliminado = eliminado;
+		this.fechaBaja = fechaBaja;
+	}
+
+	public Date getFechaBaja() {
+		return fechaBaja;
+	}
+
+	public void setFechaBaja(Date fechaBaja) {
+		this.fechaBaja = fechaBaja;
 	}
 
 	public int getIdpaciente() {
