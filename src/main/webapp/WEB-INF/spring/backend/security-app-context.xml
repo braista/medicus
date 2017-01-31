@@ -13,14 +13,14 @@
  	<intercept-url pattern="/views/login.jsp" access="IS_AUTHENTICATED_ANONYMOUSLY" />
  	<intercept-url pattern="/**" access="ROLE_Usuario" />
  	<access-denied-handler error-page="/error/accessdenied.faces" />
- <!--  -->	  
+ <!--   
  	 <form-login login-page="/login" 
             default-target-url="/home" 
-            authentication-failure-url="/loginfailed" />
+            authentication-failure-url="/loginfailed" /> -->
     <logout invalidate-session="true" logout-success-url="/logout" />
-    <session-management invalid-session-url="/login">
+    <!--  <session-management invalid-session-url="/login">
         <concurrency-control max-sessions="1" error-if-maximum-exceeded="true"/>
-    </session-management>      
+    </session-management>  -->    
  </http>
  
  <!-- Configure Auth memory access -->
