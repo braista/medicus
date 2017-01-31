@@ -11,7 +11,7 @@
 <!-- Configure Spring Security -->	
  <http auto-config="true">
  	<intercept-url pattern="/views/login.jsp" access="IS_AUTHENTICATED_ANONYMOUSLY" />
- 	<intercept-url pattern="/**" access="ROLE_Usuario" />
+ 	<intercept-url pattern="/hola**" access="ROLE_Usuario" /> <!-- TODO: BORRAR hola -->
  	<access-denied-handler error-page="/error/accessdenied.faces" />
  <!--   
  	 <form-login login-page="/login" 
