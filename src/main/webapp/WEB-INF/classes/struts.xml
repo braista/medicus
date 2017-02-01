@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>  
   <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
-
 <struts>
 	<constant name="struts.devMode" value="true"/>
+	<package name="basic" extends="struts-default">
+		<action name="home">
+			<result>/views/home.jsp</result>
+		</action>
+	</package>
 	<package name="planes" extends="struts-default">
 		<action name="planes" class="ar.com.bs.medicus.action.PlanMedicoAction">
 			<result name="success">/views/listarPlanes.jsp</result>
