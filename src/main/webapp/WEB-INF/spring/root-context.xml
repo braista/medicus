@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans" 
-xmlns:security="http://www.springframework.org/schema/security"
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:security="http://www.springframework.org/schema/security"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
 	http://www.springframework.org/schema/beans/spring-beans.xsd
 	http://www.springframework.org/schema/security 
 	http://www.springframework.org/schema/security/spring-security-3.1.1.xsd">
-	
+
 	<!-- Root Context: defines shared resources visible to all other web components -->
-		
+
 	<!-- Configuracion de spring security -->
-		<import resource="classpath:WEB-INF/spring/backend/security-app-context.xml" />
+	<import resource="classpath:WEB-INF/spring/backend/security-app-context.xml" />
+		<bean id="turnoDAO" class="ar.com.bs.medicus.dao.impl.TurnoDAOImpl"></bean>
+		
+		<bean id="turnoService" class="ar.com.bs.medicus.services.impl.TurnoServiceImpl" scope="prototype">
+			<property name="turnoDAO" ref="turnoDAO" />
+		</bean>
+		<bean id="turnoAction" class="ar.com.bs.medicus.action.TurnoAction" scope="prototype">
+			<property name="turnoService" ref="turnoService" />
+		</bean>
+	
+		
+		
 </beans>
 

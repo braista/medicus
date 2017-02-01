@@ -4,18 +4,17 @@ import java.util.List;
 
 import javax.jws.WebService;
 
-import org.hibernate.service.Service;
-
 import ar.com.bs.medicus.dto.TurnoDTO;
-
 @WebService
-public interface TurnoService extends Service{
+public interface TurnoService{
 
 	/**
 	 * Recupera todos los turnos.
 	 * @return
 	 */
 	List<TurnoDTO> getAll();
+	
+	TurnoDTO find(TurnoDTO turno);
 	
 	/**
 	 * Crea un turno.
@@ -27,12 +26,15 @@ public interface TurnoService extends Service{
 	 * Actualiza un turno.
 	 * @param entity
 	 */
-	void update(TurnoDTO dto);
+	void saveOrupdate(TurnoDTO dto);
 	
 	/**
 	 * Elimina un turno.
 	 * @param entity
 	 */
 	void delete(TurnoDTO dto);
-	
+
+
+    TurnoDTO update(TurnoDTO turno);
+    
 }

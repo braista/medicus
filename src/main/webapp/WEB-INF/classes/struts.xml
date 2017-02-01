@@ -7,9 +7,17 @@
 			<result>/views/home.jsp</result>
 		</action>
 	</package>
-	<package name="planes" extends="struts-default">
-		<action name="planes" class="ar.com.bs.medicus.action.PlanMedicoAction">
-			<result name="success">/views/listarPlanes.jsp</result>
+
+
+
+
+
+
+
+	
+	<package name="turnos" extends="struts-default">
+		<action name="turno" class="ar.com.bs.medicus.action.TurnoAction" method="list">
+			<result name="success">/views/listarTurnos.jsp</result>
 		</action>
 	</package>
 </struts>
