@@ -9,8 +9,7 @@ import ar.com.bs.medicus.dto.PacienteDTO;
 import ar.com.bs.medicus.dto.PlanMedicoDTO;
 
 public class PacienteDAOImpl implements PacienteDAO {
-	private List<PacienteDTO> pacientes;
-	
+	private List<PacienteDTO> pacientes;	
 	
 	
 	public PacienteDAOImpl() {
